@@ -1,0 +1,4 @@
+docker rm --force <container_id1> ...
+docker image rm nginx
+docker ps -a
+docker images

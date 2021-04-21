@@ -1,0 +1,2 @@
+docker run --rm -it --name missing ubuntu sh -c 'apt -qq update; apt -qq -y install curl; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website'
+

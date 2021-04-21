@@ -1,0 +1,6 @@
+docker run -d nginx
+docker run -d nginx
+docker run -d nginx
+docker stop <container_id>
+docker stop <container_id>
+docker ps -a

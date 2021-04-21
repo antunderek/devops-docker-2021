@@ -1,0 +1,3 @@
+ee457ffea9f9   nginx                        "/docker-entrypoint.…"   2 minutes ago   Exited (0) 42 seconds ago             sharp_beaver
+8c5fca4ced39   nginx                        "/docker-entrypoint.…"   2 minutes ago   Exited (0) 42 seconds ago             keen_tereshkova
+c4d349dd5b7e   nginx                        "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes                80/tcp    hopeful_spence
