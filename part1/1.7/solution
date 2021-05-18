@@ -1,0 +1,2 @@
+docker build . -t web-server
+docker --rm -it web-server
