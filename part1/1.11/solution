@@ -1,0 +1,2 @@
+docker build . -t spring-java8
+docker run --rm -it -p 8080:8080 spring-java8
