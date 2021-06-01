@@ -1,0 +1,42 @@
+version: '3.5'
+
+services:
+
+        reverse-proxy:
+                image: nginx:stable-alpine-perl
+                ports:
+                        - 8000:80
+                volumes:
+                        - ./nginx.conf:/etc/nginx/nginx.conf
+                container_name: reverse-proxy
+
+        backend:
+                image: backend-go
+                environment:
+                    POSTGRES_HOST: db_backend
+                    POSTGRES_USER: postgres
+                    POSTGRES_PASSWORD: postgres
+                    POSTGRES_DATABASE: postgres
+                ports: 
+                        - 8080:8080
+                container_name: backend
+
+        frontend:
+                image: hello-frontend
+                ports: 
+                        - 5000:5000
+                container_name: frontend
+
+        redis:
+                image: redis:alpine3.13
+                restart: unless-stopped
+                ports:
+                        - 6379:6379
+                container_name: redis
+        
+        db:
+            image: postgres:13.2-alpine
+            restart: unless-stopped
+            environment:
+                POSTGRES_PASSWORD: postgres
+            container_name: db_backend
