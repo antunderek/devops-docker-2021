@@ -1,0 +1,5 @@
+Old:
+hello-frontend   optimized            bcaabd88341c   3 hours ago          455MB
+
+New:
+hello-frontend   alpine               9f302c362a2f   10 seconds ago      288MB
